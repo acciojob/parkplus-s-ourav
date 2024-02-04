@@ -13,16 +13,16 @@ public class UserServiceImpl implements UserService {
     UserRepository userRepository4;
     @Override
     public void deleteUser(Integer userId) {
-            if(userRepository4.existsById(userId)){
+
                 userRepository4.deleteById(userId);
-            }
+
     }
 
     @Override
     public User updatePassword(Integer userId, String password) {
-        if(!userRepository4.existsById(userId)){
-            return null;
-        }
+//        if(!userRepository4.existsById(userId)){
+//            return null;
+//        }
 
         User user=userRepository4.findById(userId).get();
         user.setPassword(password);

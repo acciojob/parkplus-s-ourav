@@ -32,12 +32,12 @@ public class User {
         this.name = name;
     }
 
-    public String getPhoneNo() {
-        return phoneNo;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getPassword() {
@@ -61,7 +61,7 @@ public class User {
     int id;
 
     String name;
-    String phoneNo;
+    String phoneNumber;
     String password;
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)

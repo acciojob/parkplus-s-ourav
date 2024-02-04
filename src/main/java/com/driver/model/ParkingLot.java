@@ -15,13 +15,44 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 public class ParkingLot {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
     int parkingLotId;
     String name;
     String address;
+
+    public int getParkingLotId() {
+        return parkingLotId;
+    }
+
+    public void setParkingLotId(int parkingLotId) {
+        this.parkingLotId = parkingLotId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public List<Spot> getSpotList() {
+        return SpotList;
+    }
+
+    public void setSpotList(List<Spot> spotList) {
+        SpotList = spotList;
+    }
 
     @OneToMany (mappedBy = "parkingLot",cascade = CascadeType.ALL)
     List<Spot> SpotList=new ArrayList<>();

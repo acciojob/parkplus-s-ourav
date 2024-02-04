@@ -66,7 +66,7 @@ public class ParkingLotServiceImpl implements ParkingLotService {
         ParkingLot parkingLot=spot.getParkingLot();
 
         for(Spot s: parkingLot.getSpotList()){
-            if(s.getSpotId()==spotId){
+            if(s.getId()==spotId){
                 parkingLot.getSpotList().remove(s);
             }
         }
@@ -88,7 +88,7 @@ public class ParkingLotServiceImpl implements ParkingLotService {
                 spot.setParkingLot(parkingLot1);
 
                 for(Spot spot1 : parkingLot1.getSpotList()){
-                    if(spot1.getSpotId()==spotId){
+                    if(spot1.getId()==spotId){
                         parkingLot1.getSpotList().remove(spot1);
                         parkingLot1.getSpotList().add(spot1);
                         parkingLotRepository1.save(parkingLot1 );

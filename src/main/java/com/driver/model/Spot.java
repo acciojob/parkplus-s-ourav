@@ -22,6 +22,10 @@ public class Spot {
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
 
+    public Boolean getOccupied() {
+        return occupied;
+    }
+
     public int getId() {
         return id;
     }
@@ -46,9 +50,7 @@ public class Spot {
         this.pricePerHour = pricePerHour;
     }
 
-    public Boolean getOccupied() {
-        return occupied;
-    }
+
 
     public void setOccupied(Boolean occupied) {
         this.occupied = occupied;

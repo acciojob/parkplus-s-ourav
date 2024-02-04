@@ -16,7 +16,7 @@ public class Payment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int paymentId;
+    int id;
 
     boolean paymentCompleted;
     PaymentMode paymentMode;
@@ -25,12 +25,12 @@ public class Payment {
     @OneToOne
     Reservation reservation;
 
-    public int getPaymentId() {
-        return paymentId;
+    public int getId() {
+        return id;
     }
 
-    public void setPaymentId(int paymentId) {
-        this.paymentId = paymentId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public boolean isPaymentCompleted() {

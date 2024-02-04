@@ -16,16 +16,16 @@ import javax.persistence.*;
 public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int reservationId;
+    int id;
 
     int numberOfHours;
 
-    public int getReservationId() {
-        return reservationId;
+    public int getId() {
+        return id;
     }
 
-    public void setReservationId(int reservationId) {
-        this.reservationId = reservationId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getNumberOfHours() {

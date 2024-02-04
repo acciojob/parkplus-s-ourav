@@ -16,12 +16,12 @@ import java.util.List;
 @NoArgsConstructor
 
 public class User {
-    public int getUserId() {
-        return userId;
+    public int getId() {
+        return id;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -58,7 +58,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int userId;
+    int id;
 
     String name;
     String phoneNo;

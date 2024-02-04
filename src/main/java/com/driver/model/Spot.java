@@ -20,14 +20,14 @@ public class Spot {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int spotId;
+    int id;
 
-    public int getSpotId() {
-        return spotId;
+    public int getId() {
+        return id;
     }
 
-    public void setSpotId(int spotId) {
-        this.spotId = spotId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public SpotType getSpotType() {
@@ -46,11 +46,11 @@ public class Spot {
         this.pricePerHour = pricePerHour;
     }
 
-    public boolean isOccupied() {
+    public Boolean getOccupied() {
         return occupied;
     }
 
-    public void setOccupied(boolean occupied) {
+    public void setOccupied(Boolean occupied) {
         this.occupied = occupied;
     }
 
@@ -73,7 +73,7 @@ public class Spot {
     @Enumerated(value = EnumType.STRING)
     SpotType spotType;
     int pricePerHour;
-    boolean occupied;
+    Boolean occupied;
 
     @JoinColumn
     @ManyToOne

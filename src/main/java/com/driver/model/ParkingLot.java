@@ -18,16 +18,16 @@ import java.util.List;
 public class ParkingLot {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
-    int parkingLotId;
+    int id;
     String name;
     String address;
 
-    public int getParkingLotId() {
-        return parkingLotId;
+    public int getId() {
+        return id;
     }
 
-    public void setParkingLotId(int parkingLotId) {
-        this.parkingLotId = parkingLotId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

@@ -49,7 +49,7 @@ public class ReservationServiceImpl implements ReservationService {
             for(Spot spot1 : parkingLot.getSpotList()){
                 int wheels=0;
 
-                if(spot1.isOccupied())
+                if(spot1.getOccupied())
                     continue;
 
                 if(spot1.getSpotType().equals("TWO_WHEELER")){

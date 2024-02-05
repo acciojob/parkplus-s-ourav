@@ -9,6 +9,8 @@ import com.driver.services.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import static java.lang.Boolean.TRUE;
+
 @Service
 public class PaymentServiceImpl implements PaymentService {
     @Autowired
@@ -31,7 +33,7 @@ public class PaymentServiceImpl implements PaymentService {
 
             if(mode.equalsIgnoreCase("cash") || mode.equalsIgnoreCase("card") || mode.equalsIgnoreCase("UPI")){
                 Payment payment=Payment.builder()
-                        .paymentCompleted(Boolean.TRUE)
+                        .paymentCompleted(TRUE)
                         .reservation(reservation)
                         .build();
 

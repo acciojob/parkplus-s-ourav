@@ -14,6 +14,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+import static java.lang.Boolean.TRUE;
+
 @Service
 public class ReservationServiceImpl implements ReservationService {
     @Autowired
@@ -47,7 +49,7 @@ public class ReservationServiceImpl implements ReservationService {
             for(Spot spot1 : parkingLot.getSpotList()){
                 int wheels=0;
 
-                if(spot1.getOccupied())
+                if(spot1.isOccupied())
                     continue;
 
                 if(spot1.getSpotType().equals("TWO_WHEELER")){
@@ -76,7 +78,7 @@ public class ReservationServiceImpl implements ReservationService {
                     .user(user)
                     .spot(spot)
                     .build();
-            spot.setOccupied(Boolean.TRUE);
+            spot.setOccupied(TRUE);
             user.getReservationList().add(reservation);
             spot.getReservationList().add(reservation);
 

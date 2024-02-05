@@ -52,7 +52,7 @@ public class ParkingLotServiceImpl implements ParkingLotService {
         }
 
         parkingLot1.getSpotList().add(spot);
-        spot = spotRepository1.save(spot);
+        parkingLotRepository1.save(parkingLot1);
         //FK
 
         return spot;

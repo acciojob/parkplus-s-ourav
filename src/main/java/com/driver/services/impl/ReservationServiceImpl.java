@@ -58,7 +58,7 @@ public class ReservationServiceImpl implements ReservationService {
                 }
                 else wheels=Integer.MAX_VALUE;
 
-                if(wheels>numberOfWheels){
+                if(wheels>=numberOfWheels){
                     potentialSpotList.add(spot1);
                 }
 

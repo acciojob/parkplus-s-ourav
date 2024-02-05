@@ -18,7 +18,7 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
 
-    boolean paymentCompleted;
+    Boolean paymentCompleted;
     PaymentMode paymentMode;
 
     @JoinColumn
@@ -33,11 +33,11 @@ public class Payment {
         this.id = id;
     }
 
-    public boolean isPaymentCompleted() {
+    public Boolean getPaymentCompleted() {
         return paymentCompleted;
     }
 
-    public void setPaymentCompleted(boolean paymentCompleted) {
+    public void setPaymentCompleted(Boolean paymentCompleted) {
         this.paymentCompleted = paymentCompleted;
     }
 
